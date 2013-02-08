@@ -1,0 +1,2 @@
+#!/bin/bash
+vncviewer :13 -passwd ~/.vnc/passwd 2>&1 >/dev/null &

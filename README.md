@@ -9,7 +9,7 @@ Usage:
 
     ./server_start
     ./terminal_start
-    vncviewer :13
+    ./show_desktop
     ./record_to cast1.flv
     ./server_stop
 

@@ -3,5 +3,7 @@
 . scrcap/.env/bin/activate
 set -u
 OUTPUTFILE=$1
-flvrec.py -o $OUTPUTFILE :13
+PWDFILE="$(pwd)/scrcap/pwdfile"
+echo "000000" > "$PWDFILE"
+flvrec.py -o $OUTPUTFILE -P "$PWDFILE" localhost:13 2>&1 >/dev/null &
 #-P ~/.vnc/passwd localhost:13 -N
