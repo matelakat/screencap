@@ -1,0 +1,5 @@
+#!/bin/bash
+#Xtightvnc -geometry 853x480 -rfbauth vncpass :13 &
+cp xstartup ~/.vnc/xstartup
+echo "exec $(pwd)/scrcap/dwm-6.0/dwm" >> ~/.vnc/xstartup
+vncserver :13 -geometry 853x480 -alwaysshared

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+xrdb $HOME/.Xresources
+#xsetroot -solid grey
+#x-terminal-emulator -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &
+#x-window-manager &
+# Fix to make GNOME work
+#export XKL_XMODMAP_DISABLE=1
+
+#/etc/X11/Xsession
+
+#xmodmap -e "keysym Alt_L = Meta_L"
+#xmodmap -e "keysym Alt_R = Meta_R"
+#xmodmap -e "clear Mod1"
+#xmodmap -e "add Mod1 = Meta_L Meta_R"
+#uxterm
+xsetroot -solid black
+#exec /opt/dwm-vnc/dwm/dwm
+#exec uxterm -bg black -fg green -fullscreen -fn "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*"
+#/usr/local/bin/dwm
+#xsetroot -solid black

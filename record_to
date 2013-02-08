@@ -1,0 +1,7 @@
+#!/bin/bash
+# -N : disable cursor pseudo encoding
+. scrcap/.env/bin/activate
+set -u
+OUTPUTFILE=$1
+flvrec.py -o $OUTPUTFILE :13
+#-P ~/.vnc/passwd localhost:13 -N
