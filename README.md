@@ -9,7 +9,7 @@ Usage:
 
     ./sc-start-server
     ./sc-start-terminal
-    ./show_desktop
+    ./sc-show-desktop
     ./record_to cast1.flv
     ./server_stop
 
