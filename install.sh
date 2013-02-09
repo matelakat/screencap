@@ -23,11 +23,3 @@ wget -qO - "http://dl.suckless.org/dwm/$DWM.tar.gz" | tar -xzf -
 cd $DWM
 make
 ) >> scrcap-install.log 2>&1
-
-# set vnc password
-echo "set vnc password to 000000"
-cp files/vncpassword ~/.vnc/passwd
-chmod 0600 ~/.vnc/passwd
-
-# Note setting the password this way didn't work
-#echo -ne "000000\n000000" | vncpasswd > /dev/null
