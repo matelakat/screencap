@@ -2,13 +2,15 @@
 #Xtightvnc -geometry 853x480 -rfbauth vncpass :13 &
 
 # set vnc password
-cp files/vncpassword ~/.vnc/passwd
+INSTALLDIR=$(dirname $(readlink -f "$0"))
+
+cp "$INSTALLDIR/files/vncpassword" ~/.vnc/passwd
 chmod 0600 ~/.vnc/passwd
 
 # Note setting the password this way didn't work
 #echo -ne "000000\n000000" | vncpasswd > /dev/null
-cp files/xstartup ~/.vnc/xstartup
+cp "$INSTALLDIR/files/xstartup" ~/.vnc/xstartup
 
-echo "exec $(pwd)/dwm-6.0/dwm" >> ~/.vnc/xstartup
+echo "exec $INSTALLDIR/dwm-6.0/dwm" >> ~/.vnc/xstartup
 chmod 0700 ~/.vnc/xstartup
 vncserver :13 -geometry 853x480 -alwaysshared

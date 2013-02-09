@@ -1,8 +1,9 @@
 #!/bin/bash
 # -N : disable cursor pseudo encoding
-. .env/bin/activate
-set -u
 OUTPUTFILE=$1
-PWDFILE="$(pwd)/files/pwdfile"
+INSTALLDIR=$(dirname $(readlink -f "$0"))
+
+. "$INSTALLDIR/.env/bin/activate"
+PWDFILE="$INSTALLDIR/files/pwdfile"
 flvrec.py -o $OUTPUTFILE -P "$PWDFILE" localhost:13 2>&1 >/dev/null &
 #-P ~/.vnc/passwd localhost:13 -N
