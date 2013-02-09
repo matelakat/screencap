@@ -1,2 +1,0 @@
-#!/bin/bash
-DISPLAY=:13 uxterm -fn "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*" -bg black -fg white &
