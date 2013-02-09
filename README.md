@@ -1,4 +1,13 @@
 # Tools for recording screencasts
+A set of scripts, to manipulate:
+
+- dwm http://dwm.suckless.org/
+- vncserver
+- vncviewer
+- flvrec http://www.unixuser.org/~euske/python/vnc2flv/index.html
+
+In order to be able to easily produce screencasts in flv format. Those files
+could later be uploaded to youtube if required.
 
 ## Installation
 
