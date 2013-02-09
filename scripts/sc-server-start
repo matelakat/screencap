@@ -9,6 +9,6 @@ chmod 0600 ~/.vnc/passwd
 #echo -ne "000000\n000000" | vncpasswd > /dev/null
 cp files/xstartup ~/.vnc/xstartup
 
-echo "exec $(pwd)/scrcap/dwm-6.0/dwm" >> ~/.vnc/xstartup
+echo "exec $(pwd)/dwm-6.0/dwm" >> ~/.vnc/xstartup
 chmod 0700 ~/.vnc/xstartup
 vncserver :13 -geometry 853x480 -alwaysshared

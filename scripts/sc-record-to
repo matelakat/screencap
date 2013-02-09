@@ -1,9 +1,8 @@
 #!/bin/bash
 # -N : disable cursor pseudo encoding
-. scrcap/.env/bin/activate
+. .env/bin/activate
 set -u
 OUTPUTFILE=$1
-PWDFILE="$(pwd)/scrcap/pwdfile"
-echo "000000" > "$PWDFILE"
+PWDFILE="$(pwd)/files/pwdfile"
 flvrec.py -o $OUTPUTFILE -P "$PWDFILE" localhost:13 2>&1 >/dev/null &
 #-P ~/.vnc/passwd localhost:13 -N

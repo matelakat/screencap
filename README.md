@@ -3,10 +3,11 @@ Tools for recording screencasts
 
 Install:
 
-    ./install.sh
+    ./install.sh target_dir
 
 Usage:
 
+    cd target_dir
     ./sc-server-start
     ./sc-terminal
     ./sc-desktop-show
