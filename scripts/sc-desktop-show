@@ -1,2 +1,5 @@
 #!/bin/bash
-vncviewer :13 -passwd ~/.vnc/passwd 2>&1 >/dev/null &
+INSTALLDIR=$(dirname $(readlink -f "$0"))
+. "$INSTALLDIR/.scrc"
+
+vncviewer "$SC_DISPLAY" -passwd ~/.vnc/passwd 2>&1 >/dev/null &

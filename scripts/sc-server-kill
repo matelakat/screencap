@@ -1,2 +1,5 @@
 #!/bin/bash
-vncserver -kill :13
+INSTALLDIR=$(dirname $(readlink -f "$0"))
+. "$INSTALLDIR/.scrc"
+
+vncserver -kill "$SC_DISPLAY"
