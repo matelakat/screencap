@@ -46,6 +46,7 @@ make
 echo "Copy files to target directory"
 mkdir -p "$TGTDIR/files"
 cp files/* "$TGTDIR/files/"
+chmod 0600 "$TGTDIR/files/vncpassword"
 
 echo "Copy scripts to target directory"
 cp scripts/* "$TGTDIR/"
