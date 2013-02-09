@@ -6,5 +6,13 @@ INSTALLDIR=$(dirname $(readlink -f "$0"))
 
 . "$INSTALLDIR/.env/bin/activate"
 PWDFILE="$INSTALLDIR/files/pwdfile"
-flvrec.py -o $OUTPUTFILE -P "$PWDFILE" "$SC_DISPLAY" 2>&1 >/dev/null &
+
+if [ -z "$2" ];
+then
+    flvrec.py -r 25 -o "$OUTPUTFILE" -P "$PWDFILE" "$SC_DISPLAY" 2>&1 >/dev/null
+else
+    flvrec.py -r 25 -S "$2 ${OUTPUTFILE}.audio.mp3" -o ${OUTPUTFILE}.video.flv -P "$PWDFILE" "$SC_DISPLAY" 2>&1 >/dev/null
+    flvaddmp3.py "${OUTPUTFILE}.video.flv"  "${OUTPUTFILE}.audio.mp3" "$OUTPUTFILE"
+fi
+
 #-P ~/.vnc/passwd localhost:13 -N
