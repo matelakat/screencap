@@ -8,7 +8,7 @@ Install:
 Usage:
 
     ./sc-start-server
-    ./terminal_start
+    ./sc-start-terminal
     ./show_desktop
     ./record_to cast1.flv
     ./server_stop
