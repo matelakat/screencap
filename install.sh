@@ -49,3 +49,8 @@ cp scripts/* "$TGTDIR/"
 
 echo "Create password file"
 echo "000000" > "$TGTDIR/files/pwdfile"
+
+echo "Create default settings"
+cat > "$TGTDIR/.scrc" << EOF
+GEOMETRY="853x480"
+EOF

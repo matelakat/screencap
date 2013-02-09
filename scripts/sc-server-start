@@ -4,6 +4,8 @@
 # set vnc password
 INSTALLDIR=$(dirname $(readlink -f "$0"))
 
+. "$INSTALLDIR/.scrc"
+
 cp "$INSTALLDIR/files/vncpassword" ~/.vnc/passwd
 chmod 0600 ~/.vnc/passwd
 
@@ -13,4 +15,4 @@ cp "$INSTALLDIR/files/xstartup" ~/.vnc/xstartup
 
 echo "exec $INSTALLDIR/dwm-6.0/dwm" >> ~/.vnc/xstartup
 chmod 0700 ~/.vnc/xstartup
-vncserver :13 -geometry 853x480 -alwaysshared
+vncserver :13 -geometry "$GEOMETRY" -alwaysshared
