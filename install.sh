@@ -12,7 +12,7 @@ set +u
 . .env/bin/activate
 set -u
 pip install vnc2flv
-) 2>&1 >> logfile
+) >> scrcap-install.log 2>&1
 
 # dwm
 echo "download and compile dwm"
@@ -22,11 +22,11 @@ DWM=dwm-6.0
 wget -qO - "http://dl.suckless.org/dwm/$DWM.tar.gz" | tar -xzf -
 cd $DWM
 make
-) 2>&1 >> logfile
+) >> scrcap-install.log 2>&1
 
 # set vnc password
 echo "set vnc password to 000000"
-cp passwd ~/.vnc/passwd
+cp files/vncpassword ~/.vnc/passwd
 chmod 0600 ~/.vnc/passwd
 
 # Note setting the password this way didn't work
