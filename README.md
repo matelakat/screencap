@@ -1,13 +1,17 @@
-Tools for recording screencasts
-===============================
+# Tools for recording screencasts
 
-Install:
+## Installation
 
-    ./install.sh target_dir
+    ./install.sh `TARGET_DIR`
 
-Usage:
+## Configuration
+In the specified `TARGET_DIR` you can find a file, called `.scrc`. That is a
+simple file, that is sourced by some of the scripts. You can configure the 
+size of the virtual display, and the display port.
 
-    cd target_dir
+## Usage
+
+    cd TARGET_DIR
     ./sc-server-start
     ./sc-desktop-show
     ./sc-record-to cast1.flv
