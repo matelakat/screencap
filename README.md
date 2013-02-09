@@ -7,7 +7,7 @@ Install:
 
 Usage:
 
-    ./server_start
+    ./sc-start-server
     ./terminal_start
     ./show_desktop
     ./record_to cast1.flv
