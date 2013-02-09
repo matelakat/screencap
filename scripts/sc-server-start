@@ -15,4 +15,4 @@ cp "$INSTALLDIR/files/xstartup" ~/.vnc/xstartup
 
 echo "exec $INSTALLDIR/dwm-6.0/dwm" >> ~/.vnc/xstartup
 chmod 0700 ~/.vnc/xstartup
-vncserver :13 -geometry "$GEOMETRY" -alwaysshared
+vncserver "$SC_DISPLAY" -geometry "$GEOMETRY" -alwaysshared

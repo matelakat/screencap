@@ -1,6 +1,8 @@
 #!/bin/bash
 set -eu
 
+THISDIR=$(dirname $(readlink -f "$0"))
+
 function print_usage_and_die
 {
 cat >&2 << USAGE
@@ -37,6 +39,7 @@ cd "$TGTDIR"
 DWM=dwm-6.0
 wget -qO - "http://dl.suckless.org/dwm/$DWM.tar.gz" | tar -xzf -
 cd $DWM
+cp "$THISDIR/files/config.h" .
 make
 ) >> "$LOGFILE" 2>&1
 
@@ -53,4 +56,5 @@ echo "000000" > "$TGTDIR/files/pwdfile"
 echo "Create default settings"
 cat > "$TGTDIR/.scrc" << EOF
 GEOMETRY="853x480"
+SC_DISPLAY=":13"
 EOF
