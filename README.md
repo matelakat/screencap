@@ -25,3 +25,9 @@ size of the virtual display, and the display port.
     ./sc-desktop-show
     ./sc-record-to cast1.flv
     ./sc-server-kill
+
+## Record the desktop
+This requires `x11vnc` to be installed.
+
+    cd TARGET_DIR
+    ./sc-record-x11 cast1.flv

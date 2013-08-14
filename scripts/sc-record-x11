@@ -1,0 +1,18 @@
+#!/bin/bash
+
+INSTALLDIR=$(dirname $(readlink -f "$0"))
+
+. "$INSTALLDIR/.scrc"
+. "$INSTALLDIR/.env/bin/activate"
+
+set -u
+OUTPUTFILE=$1
+
+x11vnc -quiet -localhost -viewonly -nopw -once -bg
+echo "Press Enter to start recording"
+read
+flvrec.py -r 25 -o "$OUTPUTFILE" &
+flvrecpid="$!"
+echo "Press Enter when done"
+read
+kill $flvrecpid
