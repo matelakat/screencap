@@ -25,7 +25,7 @@ LOGFILE="$TGTDIR/install.log"
 echo "setup a virtual environment, and install vnc2flv"
 (
 cd "$TGTDIR"
-virtualenv .env
+virtualenv -p python2 .env
 set +u
 . .env/bin/activate
 set -u
