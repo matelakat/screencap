@@ -36,9 +36,8 @@ pip install vnc2flv
 echo "download and compile dwm"
 (
 cd "$TGTDIR"
-DWM=dwm-6.0
-wget -qO - "http://dl.suckless.org/dwm/$DWM.tar.gz" | tar -xzf -
-cd $DWM
+git clone http://git.suckless.org/dwm dwm
+cd dwm
 cp "$THISDIR/files/config.h" .
 make
 ) >> "$LOGFILE" 2>&1

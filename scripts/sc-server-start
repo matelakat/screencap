@@ -7,7 +7,7 @@ INSTALLDIR=$(dirname $(readlink -f "$0"))
 . "$INSTALLDIR/.scrc"
 
 cp "$INSTALLDIR/files/xstartup" ~/.vnc/xstartup
-echo "exec $INSTALLDIR/dwm-6.0/dwm" >> ~/.vnc/xstartup
+echo "exec $INSTALLDIR/dwm/dwm" >> ~/.vnc/xstartup
 chmod 0700 ~/.vnc/xstartup
 
 vncserver "$SC_DISPLAY" -geometry "$GEOMETRY" -alwaysshared -rfbauth "$INSTALLDIR/files/vncpassword"
