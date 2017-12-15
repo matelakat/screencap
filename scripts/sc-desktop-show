@@ -2,4 +2,4 @@
 INSTALLDIR=$(dirname $(readlink -f "$0"))
 . "$INSTALLDIR/.scrc"
 
-vncviewer "$SC_DISPLAY" -passwd "$INSTALLDIR/files/vncpassword" 2>&1 >/dev/null &
+vncviewer "$SC_DISPLAY" -passwd "$INSTALLDIR/files/vncpassword" -RemoteResize=0 2>&1 >/dev/null &
